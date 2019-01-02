@@ -1,0 +1,42 @@
+
+
+Node 1
+
+Scheme:       
+java -cp ~/weka.jar weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+
+Relation:     final_gene_5Y_class_347_DH_Rest-weka.filters.unsupervised.attribute.Remove-V-R7175,17078,7822,3034,15049,18112,4273,3412,10428,12001,12616,16406,7574,7988,4217,23955,4653,7209,4676,3980,24369-weka.filters.unsupervised.attribute.Remove-V-R1-10,21-weka.filters.supervised.instance.SMOTE-C0-K5-P517.0-S1
+
+ 
+
+Node 2
+
+Scheme:       
+java -cp ~/weka.jar weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 1 -M 1.0 -V 0.001 -S 1
+
+Relation:     final_gene_5Y_class_341_19_DR_Rest_227_14_3X
+
+ 
+
+Node 3
+
+Scheme:       
+java -cp ~/weka.jar weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 1 -M 1.0 -V 0.001 -S 1
+
+Relation:     final_gene_5Y_class_322_20_LH_Rest_80_9_2X
+
+ 
+
+Node 4
+
+Scheme:       
+java -cp ~/weka.jar weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 1 -M 1.0 -V 0.001 -S 1
+
+Relation:     final_gene_5Y_class_302_40_DS_Rest_197_6_3X
+
+ 
+
+Node 5
+
+Scheme:       
+java -cp ~/weka.jar weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 1.085; 1.0 0.0]" -S 1 -W weka.classifiers.trees.RandomForest -- -P 100 -I 100 -num-slots 1 -K 1 -M 1.0 -V 0.001 -S 1
